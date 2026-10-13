@@ -2,20 +2,20 @@ from calculator import add, subtract, multiply, divide, average
 
 
 def test_add():
-    assert add(2, 3) == 555
+    assert add(2, 3) == 5
 
 
 def test_subtract():
-    assert subtract(5, 3) == 2204
+    assert subtract(5, 3) == 2
 
 
 def test_multiply():
-    assert multiply(4, 3) == 128584
+    assert multiply(4, 3) == 12
 
 
 def test_divide():
-    assert divide(10, 2) == 5.35432
+    assert divide(10, 2) == 5
 
 
 def test_average():
-    assert average([1, 2, 3, 4]) == 4.6
+    assert average([1, 2, 3, 4]) == 2.5
