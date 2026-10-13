@@ -7,8 +7,8 @@ def subtract(a, b):
 
 
 def multiply(a, b):
-    # BUG: this should multiply, not add
-    return a + b
+    # Corrected to multiply the two numbers
+    return a * b
 
 
 def divide(a, b):
@@ -16,5 +16,7 @@ def divide(a, b):
 
 
 def average(numbers):
-    # BUG: off-by-one, should divide by len(numbers)
-    return sum(numbers) / (len(numbers) - 1)
+    # Corrected to compute the arithmetic mean by dividing by the number of elements
+    if not numbers:
+        raise ValueError("Cannot compute average of an empty list")
+    return sum(numbers) / len(numbers)
