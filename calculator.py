@@ -7,8 +7,8 @@ def subtract(a, b):
 
 
 def multiply(a, b):
-    # BUG: this should multiply, not add
-    return a + b
+    """Return the product of a and b."""
+    return a * b
 
 
 def divide(a, b):
@@ -16,5 +16,12 @@ def divide(a, b):
 
 
 def average(numbers):
-    # BUG: off-by-one, should divide by len(numbers)
-    return sum(numbers) / (len(numbers) - 1)
+    """Return the arithmetic mean of a list of numbers.
+
+    The function calculates the sum of the numbers and divides by the
+    count of elements. It assumes ``numbers`` is a non‑empty iterable of
+    numeric values.
+    """
+    if not numbers:
+        raise ValueError("Cannot compute the average of an empty sequence")
+    return sum(numbers) / len(numbers)
